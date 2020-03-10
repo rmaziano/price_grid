@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,500&display=swap');
+body{
+  font-family: 'Poppins';
+  background-color: hsl(204, 43%, 93%);
+  padding-top: 200px;
+}
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  justify-items: stretch;
+  border: 1px solid hsl(204,43%, 93%);
+  margin-left:30%;
+  margin-right:30%;
+  border-radius: 20px;
+      
+}
+.upper{
+  background-color: #fff;
+  grid-column: 1/3;
+  grid-row: 1;
+  padding: 20px 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+h2{
+  color:hsl(179, 62%, 43%);
+}
+.upper > p{
+  line-height: 1.5;
+  color: hsl(218, 22%, 67%);
+  font-size: 16;
+}
+#title-green{
+  color: hsl(71, 73%, 48%);
+}
+.bottom-left{
+      color: hsl(204, 43%, 93%);
+      background-color: hsl(179, 62%, 43%);
+      grid-column: 1/2;
+      grid-row: 2/3;
+      padding: 20px 30px;
+      border-bottom-left-radius: 20px;
+}
+.price {
+  font-size: 2em;
+  font-weight: bold;
+}
+.bottom-right{
+  color:hsl(204, 43%, 93%);
+  background-color: hsl(179, 62%, 50%);
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 20px 30px;
+  border-bottom-right-radius: 20px;
+}
+.bottom-right > ul{
+      list-style-type: none;
+      font-weight: 200;
+      padding: 0;
+}
+.signup{
+  display: inline-block;
+  color: #fff;
+  background-color: hsl(71, 73%, 54%);
+  text-align: center;
+  border: 1px;
+  padding: 1rem .75rem;
+  font-size: 1rem;
+  border-radius: 0.30rem;
+  width: 100%;
+  margin-top: 30px;
+  transition-duration: 0.4s;
+}
+.month{
+  font-weight: 200;
+  align-self: center;
+}
+.wrapper2{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1em;
+}
+.signup:hover{
+  transform: scale(1.1);
+}
+footer{
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+    
+    @media screen and (max-width: 1000px){
+      body{
+        padding-top: 0;
+        margin:30px 30px 30px 30px;
+      }
+      .wrapper{
+      display: grid;
+      width: 100%;
+      margin-left:0px;
+      grid-template-columns: 1fr ;
+    }
+      .upper{
+      background-color: #fff;
+      grid-column: 1/2;
+      grid-row: 1;
+    }
+    .bottom-right{
+      background-color: hsl(179, 62%, 50%);;
+      grid-column: 1/2;
+      grid-row: 3/4;
+      border-bottom-left-radius: 20px;
+    }
+    .bottom-left{
+      border-bottom-left-radius: 0px;
+}
+    footer{
+      position: relative;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+}
+}
+    
+</style>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="upper">
+  <h2>Join our community</h2>
+
+  <h3 id="title-green">30-day, hassle-free money back guarantee</h3>
+  <p>
+  Gain access to our full library of tutorials along with expert code reviews.<br> 
+  Perfect for any developers who are serious about honing their skills.
+  </p>
+</div>
+<div class="bottom-left">
+  <h3>Monthly Subscription</h3>
+
+  <div class="wrapper2">
+  <div class="price">&dollar;29</div>
+  <div class="month">per month</div>
+  </div>
+  Full access for less than &dollar;1 a day
+
+  <button class="signup">Sign Up</button>
+</div>
+<div class="bottom-right">
+  <h3>Why Us</h3>
+  <ul>
+  <li>Tutorials by industry experts</li>
+  <li>Peer &amp; expert code review</li>
+  <li>Coding exercises</li>
+  <li>Access to our GitHub repos</li>
+  <li>Community forum</li>
+  <li>Flashcard decks</li>
+  <li>New videos every week</li>
+  </ul>
+</div>
+</div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/rmaziano">Ryan Maziano</a>.
+    </p>
+  </footer>
+</body>
+</html>
